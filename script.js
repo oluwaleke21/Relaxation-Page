@@ -1,17 +1,17 @@
 
-const showOverlayButton = document.getElementById('feedback-btn');
-const overlay = document.getElementById('feedback');
+const feedbackBtn = document.getElementById('feedbackBtn');
+const feedbackForm = document.getElementById('feedbackForm');
 
-showOverlayButton.addEventListener('click', () => {
-    overlay.style.opacity = '0.5'; 
-    overlay.style.pointerEvents = 'auto'
+feedbackBtn.addEventListener('click', () => {
+    feedbackForm.style.opacity = '0.5'; 
+    feedbackForm.style.pointerEvents = 'auto'
     document.body.style.overflow = 'hidden';
 });
 
-overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) {
-        overlay.style.opacity = '0'; 
-        overlay.style.pointerEvents = 'none';
+feedbackForm.addEventListener('click', (event) => {
+    if (event.target === feedbackForm) {
+        feedbackForm.style.opacity = '0'; 
+        feedbackForm.style.pointerEvents = 'none';
         document.body.style.overflow = 'auto'; 
     }
 });
